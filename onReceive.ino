@@ -36,8 +36,8 @@ void onReceive(int packetSize) {
   }
 
   // Check if it is a pair request at first.
-  if(incoming.substring(0,6) == "PAIRDV"){
-    keyExchange(sender, false, incoming.substring(6, 38));
+  if(incoming.substring(0,commandLength) == "PAIRDV"){
+    keyExchange(sender, false, incoming.substring(commandLength, 38));
     return; // Skip the rest of the function if it is a pair request.
   }
     

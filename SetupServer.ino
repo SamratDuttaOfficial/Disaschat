@@ -45,7 +45,7 @@ void addLine(String line, bool printNewLn, bool clearTextbox){
     Serial.println(line); // Use Serial.println when printSerial is 2
 
   File file = SPIFFS.open(messagesFilePath, FILE_READ);
-  if(file.size() > 700000){ // maximum storage for msgs is 70000 byes (50kb extra might be needed).
+  if(file.size() > 700000){ // maximum storage for msgs is 700000 bytes.
     file = SPIFFS.open(messagesFilePath, FILE_WRITE);
     Serial.println("Clearing message history to save space. Current size: " + String(file.size()));
     file.print("Message history cleared to save space.");

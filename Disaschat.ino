@@ -36,9 +36,9 @@
 #include <TinyGPS++.h>
 
 // BOARD
-//Select which T-Beam board is being used. Only uncomment one.
+// Select which T-Beam board is being used. Only uncomment one.
 //#define ESPLORA // Combination of ESP32 and LoRa module, manually built.
-// #define T_BEAM_V07  // AKA Rev0 (first TTGO TBeam board released)
+//#define T_BEAM_V07  // AKA Rev0 (first TTGO TBeam board released)
 #define T_BEAM_V10  // AKA Rev1 (second TTGO TBeam board released). We are using this.
 
 // For saving chat messages in SPIFFS
@@ -63,6 +63,10 @@
 
 // Frequency
 #define BAND  867E6
+//replace this with your location's frequency 
+//433E6 for Asia, 867E6 for India.
+//866E6 for Europe
+//915E6 for North America
 
 // For-GPS
 #if defined(T_BEAM_V07)
@@ -127,7 +131,7 @@ struct incomingFile{
 };
 struct incomingFile incomingFiles[3]; // Array to store incomingFiles. 
 // About 300,000 bytes (300kb) are left for local variables. So, we have to use it carefully. 
-int spaceConsumedByFiles; // Saves how much total space has the incomingFiles has consumes.
+int spaceConsumedByFiles; // Saves how much total space has the incomingFiles has consumed.
 const int uniqueIdLength = 4; // Length of uniqueId used while sending long texts or images.
 const int messageTypeLength = 6; // Length of messageType identifier (ex. #FILE# or #TEXT#).
 const int commandLength = 6; // Length of each command.
@@ -135,7 +139,7 @@ const int maxFileSize = 501200; // 50 KB is the maximum size of a file we can se
 // End of for-storing-files.
 
 // For-WiFi-access-point
-const char* wifiAPName = "Disaschat";
+const char* wifiAPName = "Disaschat2";
 const char* wifiAPPassword = "123456789";
 const byte DNS_PORT = 53;
 IPAddress apIP(192, 168, 1, 1);
@@ -239,7 +243,7 @@ void setup() {
   Serial.println("Message example: JG568H Hello World.");
   Serial.println("Send to address 000000 to send a message to every LoRa in range (Group Message).");
   Serial.println("Group messages are not encrypted. Use them for SOS only.");
-  Serial.println("Command to send SOS with your location: 000000 SOS");
+  Serial.println("Command to send SOS with your location: 000000 SOSGPS");
   Serial.println("Maximum message length is 51200 characters.");
   Serial.println("Message format for sending files (<50KB):");
   Serial.println("<receiver_address><space>#FILE#<space><file_content>");
@@ -281,6 +285,6 @@ void loop() {
   destinationAddress = "000000";
   sendMessage(String(packetNumberIterator));
   packetNumberIterator += 1;
-  delay(30000);
-  */ 
+  delay(20000);
+  */
 }
