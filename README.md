@@ -32,24 +32,24 @@ Choosing the right LoRa Module:
 
 5. Connect with LoRa (If you are not using TTGO TBeam V1.1): 
 
-	LoRa    ESP32 (ESP-WROOM-32)
-	----------------------------
-	ANA:    (Antenna)
-	GND:    GND
-	DIO3:   don’t connect
-	DIO4:   don’t connect
-	3.3V:   3.3V
-	DIO0:   GPIO 2
-	DIO1:   don’t connect
-	DIO2:   don’t connect
-	GND:    don’t connect
-	DIO5:   don’t connect
-	RESET:  GPIO 14
-	NSS:    GPIO 5
-	SCK:    GPIO 18
-	MOSI:   GPIO 23
-	MISO:   GPIO 19
-	GND:    don’t connect
+
+	LoRa pin:   ESP32 (ESP-WROOM-32) pin
+	ANA:        (Antenna)
+	GND:        GND
+	DIO3:       don’t connect
+	DIO4:       don’t connect
+	3.3V:       3.3V
+	DIO0:       GPIO 2
+	DIO1:       don’t connect
+	DIO2:       don’t connect
+	GND:        don’t connect
+	DIO5:       don’t connect
+	RESET:      GPIO 14
+	NSS:        GPIO 5
+	SCK:        GPIO 18
+	MOSI:       GPIO 23
+	MISO:       GPIO 19
+	GND:        don’t connect
 
 6. Installing a library:
 	Sketch > Include library > Add .zip library - and add the library zip.
@@ -58,9 +58,9 @@ Choosing the right LoRa Module:
 	i. Find the variable const char* wifiAPName and change its value to 'Disaschat-<YourName>'. For example: Disaschat-Samrat.
 	ii. Find the variable const char* wifiAPPassword and change its value to a strong password.
 
-7. Upload the code to the board using the (-->) button in Arduino IDE.
+8. Upload the code to the board using the (-->) button in Arduino IDE.
 
-8. Using the Disaschat Messenger:
+9. Using the Disaschat Messenger:
 	i. Power your device. Powering it with a powerbank and USB cable is a good option.
 	ii. Connect your phone to the Wifi Access Point of your device.
 	iii. Open this URL in a browser: 192.168.1.1.
