@@ -34,28 +34,28 @@ Choosing the right LoRa Module:
 
 	| LoRa pin 	| ESP32 (ESP-WROOM-32) pin  |
 	|:---------:|:-------------------------:|
-	|ANA:		|       (Antenna)			|
-	|GND:       | 		GND 				|
-	|DIO3: 		|       don’t connect 		|
-	|DIO4:      | 		don’t connect 		|
-	|3.3V:      | 		3.3V 				|
-	|DIO0:      | 		GPIO 2 				|
-	|DIO1:      | 		don’t connect 		|
-	|DIO2:      | 		don’t connect 		|
-	|GND:       | 		don’t connect 		|
-	|DIO5:      | 		don’t connect 		|
-	|RESET:     | 		GPIO 14  			|
-	|NSS:       | 		GPIO 5  			|
-	|SCK:       | 		GPIO 18  			|
-	|MOSI:      | 		GPIO 23  			|
-	|MISO:      | 		GPIO 19  			|
-	|GND:       | 		don’t connect  		|
+	|ANA		|       (Antenna)			|
+	|GND        | 		GND 				|
+	|DIO3 		|       don’t connect 		|
+	|DIO4       | 		don’t connect 		|
+	|3.3V       | 		3.3V 				|
+	|DIO0       | 		GPIO 2 				|
+	|DIO1       | 		don’t connect 		|
+	|DIO2       | 		don’t connect 		|
+	|GND        | 		don’t connect 		|
+	|DIO5       | 		don’t connect 		|
+	|RESET      | 		GPIO 14  			|
+	|NSS        | 		GPIO 5  			|
+	|SCK        | 		GPIO 18  			|
+	|MOSI       | 		GPIO 23  			|
+	|MISO       | 		GPIO 19  			|
+	|GND        | 		don’t connect  		|
 
 6. Installing a library:
 	Sketch > Include library > Add .zip library - and add the library zip.
 
 7. Change Wifi name and password:
-	i. Find the variable const char* wifiAPName and change its value to 'Disaschat-<YourName>'. For example: Disaschat-Samrat.
+	i. Find the variable const char* wifiAPName and change its value to 'Disaschat-YourName'. For example: Disaschat-Samrat.
 	ii. Find the variable const char* wifiAPPassword and change its value to a strong password.
 
 8. Upload the code to the board using the (-->) button in Arduino IDE.
