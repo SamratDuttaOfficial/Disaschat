@@ -6,6 +6,9 @@
 //More on LoRa: https://www.sciencedirect.com/science/article/pii/B9780128188804000041
 //LoRa frequency bands, country wise: https://market.thingpark.com/lorawan-frequency-band
 //LoRa Sandip Mistry Library (with examples): https://github.com/sandeepmistry/arduino-LoRa
+//Arduino Cryptographic Library (with examples): https://github.com/rweather/arduinolibs
+//Arduino Cryptographic Library documentation: https://rweather.github.io/arduinolibs/crypto.html
+//TinyGPS-Plus library: http://arduiniana.org/libraries/tinygpsplus
 //LoRa TTGO TBeam Library (with examples): https://github.com/LilyGO/TTGO-T-Beam
 
 #include <SPI.h>
